@@ -22,6 +22,7 @@ int main(){
     */
 
    // Getting TLE in above approach of array hence optimised it.
+   // Question: https://codeforces.com/contest/318/problem/A
 
    long long ans=0;
 
