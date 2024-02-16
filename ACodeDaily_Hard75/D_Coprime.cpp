@@ -45,7 +45,7 @@ int main(){
         int ans=-1;
         for(int i=1; i<=1000; i++){
             for(int j=1; j<=1000; j++){
-                if(v[i] && v[j] && __gcd(i,j)==1){      // i and j represents the numbers and v[i],v[j] there respective last indices
+                if(v[i] && v[j] && __gcd(i,j)==1){      // i and j represents the numbers and v[i],v[j] their respective last indices
                     ans= max(ans, v[i]+v[j]);
                 }
             }
