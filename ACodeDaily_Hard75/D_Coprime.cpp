@@ -23,7 +23,7 @@ int main(){
         // cout<<ans<<'\n';
 
         /*
-            Question: https://codeforces.com/contest/1742/problem/D
+            Question: https://codeforces.com/contest/1742/problem/D (1100)
 
             Approach=> As above brute force approach gave TLE (as n<=2*1e5 ie, n^2==1e10) and time limit was 3sec
             ie, in 1 sec 1e8 operations can be run and in 3sec 3*1e8.
