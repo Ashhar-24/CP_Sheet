@@ -28,7 +28,8 @@ int main(){
             Approach=> As above brute force approach gave TLE (as n<=2*1e5 ie, n^2==1e10) and time limit was 3sec
             ie, in 1 sec 1e8 operations can be run and in 3sec 3*1e8.
 
-            So in the new approach, instead of storing  the value at the index, we store the index at the said value, ie now the value acts as the new index and the index as the new value. By doing this we store the
+            So in the new approach, instead of storing  the value at the index, we store the index at the said value, 
+            ie now the value acts as the new index and the index as the new value. By doing this we store the
             element's max index where it is present. ie, now the array contains the max index for the element and if
             the element is not present the index value will be 0.
             Then we traverse this array and check if the element is present ie, v[i]>0 if the element is present and
@@ -44,7 +45,7 @@ int main(){
         int ans=-1;
         for(int i=1; i<=1000; i++){
             for(int j=1; j<=1000; j++){
-                if(v[i] && v[j] && __gcd(i,j)==1){
+                if(v[i] && v[j] && __gcd(i,j)==1){      // i and j represents the numbers and v[i],v[j] there respective last indices
                     ans= max(ans, v[i]+v[j]);
                 }
             }
