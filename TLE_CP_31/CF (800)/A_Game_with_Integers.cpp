@@ -16,7 +16,7 @@ int main(){
             [Question lang is bit complex, the test case given makes it bit easy to understand]
         */
 
-        if(n%3!=0)cout<<"First"<<'\n';
+        if(n%3!=0) cout<<"First"<<'\n';
         else cout<<"Second"<<'\n';
     }
 }
