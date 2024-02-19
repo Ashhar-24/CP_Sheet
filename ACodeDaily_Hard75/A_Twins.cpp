@@ -15,7 +15,7 @@ int main(){
     sort(v.begin(), v.end());
 
     int sum=0;
-    for(int i=0; i<n; i++){sum+=v[i];}
+    for(int i=0; i<n; i++) sum+=v[i];
 
     int count=0, maxsum=0;
     for(int i=n-1; i>=0; i--){
