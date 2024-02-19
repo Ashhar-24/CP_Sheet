@@ -49,7 +49,8 @@ int main(){
 
     /*
         Getting unknown behaviour while printing directly 2*(k-ceil(n/2.0)), ie not getting long long answer
-        because it was getting converted into double and hence overflow chances increased.
+        because it was getting converted into double and hence overflow chances increased, therefore had to use 
+        a variable to store the result.
     */ 
 
 }
