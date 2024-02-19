@@ -16,7 +16,7 @@ int main(){
         */
 
         vector <int> ans(n);
-        bool possible=1;        // whether a unique array is possible or not
+        bool possible=1;        // to check whether a unique array is possible or not
 
         ans[0]=v[0];
         for(int i=1; i<n; i++){
