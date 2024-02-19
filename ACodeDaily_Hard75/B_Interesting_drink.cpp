@@ -23,9 +23,20 @@ int main(){
     /*
         Ques: https://codeforces.com/contest/706/problem/B (1100 rated)
         First the brute force approach of counting the no.s smaller than or equal to coins gave TLE.
-        To Optimise it,we have 2 solutions:
+        
+        To Optimise it, we have 2 solutions:
 
-        1. 
+        1. [dp]
+        We make a frequency array that keeps track of the frequency of the elements in the originalarray. 
+        Then we take the prefix sum of the frequency array which will direclty tell us the number of elements 
+        smaller or equal to the element represented by the index of prefix array ie, by directly going to the 
+        index we can know how many elements are smaller than or equal to that index (which represents the coins).
+
+        2. [Binary Search]
+        Using Binary search (upper bound) approach. 
+        First we sort the array then, calculate the no of elements smaller to or greater than the coins by
+        taking the upper bound.
+
     */
 
 
