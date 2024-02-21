@@ -5,7 +5,7 @@ using namespace std;
 void solve(){
     int n; cin>>n;
     vector <string> v(n);
-    unordered_set <string> s;
+    unordered_set <string> s;   // Takeaway
     for(int i=0; i<n; i++){
         cin>>v[i];
         s.insert(v[i]);
@@ -75,3 +75,15 @@ int main() {
 }
 
 // Quesn: https://codeforces.com/contest/1703/problem/D
+
+/*
+    Approach: 1. O(n^2)    
+              2. O(n)
+
+    1. As I had looped over the vector of strings and used again find() over the vector, both had time complexity
+       as O(n), hence got TLE as the constraints ie, n is <=10^5.
+
+    2. Optimised above by using unordered_set. The algorithm to create string was same, just changed the way of
+       finding the elements of the vector. We used count() over the unordered_set which stored the elements of 
+       the vector and it gave the output in O(1).
+*/
