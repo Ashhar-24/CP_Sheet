@@ -22,3 +22,7 @@ int main() {
 }
 
 // Quesn: https://codeforces.com/contest/405/problem/A
+/*
+    Appproach: Simple observation of the image tells that we just need to sort the array 
+    and it would give our desired answer.
+*/
