@@ -8,14 +8,7 @@ int main(){
         vector <int> v(n);
         for(int i=0; i<n; i++) cin>>v[i];
 
-        /*
-            Quesn: https://codeforces.com/contest/1739/problem/B (1100)
-            Approach=> Simple logic: As the array 'd' contains mod value, hence have to check whether the element
-            in array 'ans' is strictly greater. Also have to take care whether v[i]==0 or not. 
-
-        */
-
-        vector <int> ans(n);
+        vector <int> ans(n);    // stores the o/p array
         bool possible=1;        // to check whether a unique array is possible or not
 
         ans[0]=v[0];
@@ -35,3 +28,15 @@ int main(){
 
     }
 }
+
+// Quesn: https://codeforces.com/contest/1739/problem/B (1100)
+
+/*
+    Approach=> O(n)
+        Basic mod (difference) observation shows us that since the array 'v' contains 
+        mod value, hence have to check whether the element in array 'ans[i]' is strictly greater than 
+        the next element in 'v' ie v[i+1], as smaller value of v[i+1] would mean that there could be 
+        2 nos possible such that mod difference gives ans[i]. Also have to take care when v[i]==0, 
+        as it would mean that difference is zero or ans[i-1]==ans[i] 
+
+*/
