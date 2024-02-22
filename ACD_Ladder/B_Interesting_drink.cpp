@@ -17,27 +17,7 @@ int main(){
 
                     //     cout<<count<<'\n';
                     // }
-                    // This approach gava TLE: O(m*n)=1e14
-
-
-    /*
-        Ques: https://codeforces.com/contest/706/problem/B (1100 rated)
-        First the brute force approach of counting the no.s smaller than or equal to coins gave TLE.
-        
-        To Optimise it, we have 2 solutions:
-
-        1. [dp]
-        We make a frequency array that keeps track of the frequency of the elements in the originalarray. 
-        Then we take the prefix sum of the frequency array which will direclty tell us the number of elements 
-        smaller or equal to the element represented by the index of prefix array ie, by directly going to the 
-        index we can know how many elements are smaller than or equal to that index (which represents the coins).
-
-        2. [Binary Search]
-        Using Binary search (upper bound) approach. 
-        First we sort the array then, calculate the no of elements smaller to or greater than the coins by
-        taking the upper bound.
-
-    */
+                    // TLE: O(m*n)=1e10
 
 
     // Solution 1
@@ -69,13 +49,33 @@ int main(){
     // }
 
 
-    // Solution 2 (easy way): Binary Search and using upper bound
+    // Solution 2 (easy way): Using upper bound O(m*logn)
     sort(v.begin(),v.end());
 
     int m; cin>>m;
     while(m--){
             int coins; cin>>coins;
-            auto x=upper_bound(v.begin(),v.end(),coins)-v.begin();
+            auto x=upper_bound(v.begin(),v.end(),coins)-v.begin();      // O(logn)
             cout<<x<<'\n';
         }
 }
+
+//Ques: https://codeforces.com/contest/706/problem/B (1100 rated)
+
+/*
+    Approach=>  As the constraints given n=1e5 and m=1e5, so for optimal solution the total complexity
+                of our solution must be either O(n) or O(nlogn).
+
+            To Optimise it, we have 2 solutions:
+
+            1. [Binary Search] (easy to understand) O(nlogn)
+            Using Binary search (upper bound) approach. 
+            First we sort the array then, calculate the no of elements smaller or equal to the coins by
+            taking the upper bound of it.
+
+            2. [dp] (bit complex to understand) O(n)
+            We make a frequency array that keeps track of the frequency of the elements in the original array. 
+            Then we take the prefix sum of the frequency array which will direclty tell us the number of elements 
+            smaller or equal to the element represented by the index of prefix array ie, by directly going to the 
+            index we can know how many elements are smaller than or equal to that index (which represents the coins).
+*/
