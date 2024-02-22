@@ -6,18 +6,13 @@ int main(){
     vector<int>v(n);
     for(int i=0; i<n; i++) cin>>v[i];
 
-    /*
-        Ques: https://codeforces.com/contest/160/problem/A
-        To get min no of coins required, sort the array and calculate the sum from end and keep subtracting the
-        value from total sum of array. Keep doing until the sum gets strictly greater than the remaining sum.
-    */
 
     sort(v.begin(), v.end());
 
     int sum=0;
-    for(int i=0; i<n; i++) sum+=v[i];
+    for(int i=0; i<n; i++) sum+=v[i];   // Calculates the array sum
 
-    int count=0, maxsum=0;
+    int count=0, maxsum=0;              // count: Stores min no of elements required
     for(int i=n-1; i>=0; i--){
         if(maxsum<=sum){
             maxsum+=v[i]; 
@@ -29,3 +24,11 @@ int main(){
     cout<<count<<'\n';
 
 }
+
+//  Ques: https://codeforces.com/contest/160/problem/A
+/*  Approach: O(n)
+        As we have to select min no of elements such that we get the max sum and the sum should be greater 
+        than the sum of remaining elements. Therefore we first sort the array and to get max sum with min no.
+        of elements, we iterarte the array backwards.
+    
+*/
