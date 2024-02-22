@@ -1,5 +1,3 @@
-// Quesn: https://codeforces.com/contest/208/problem/A (900 rated)
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -8,11 +6,6 @@ int main(){
 
     string ans;
     int i=0; 
-
-    /*
-        Just loop over the string if found WUB increment the iterator by 3. Else push the character and check if the
-        next 3 characters are WUB, if yes add a space and increase the iterator by 4.
-    */
 
     while(i<s.length()){
         if(s[i]=='W' and s[i+1]=='U' and s[i+2]=='B'){
@@ -30,3 +23,10 @@ int main(){
     }
         cout<<ans;
 }
+
+// Quesn: https://codeforces.com/contest/208/problem/A (900 rated)
+/*
+    Approach: O(n)
+        Just loop over the string if found "WUB" increment the iterator by 3. Else push the character and check if the
+        next 3 characters are WUB, if yes add a space and increase the iterator by 4.
+*/
