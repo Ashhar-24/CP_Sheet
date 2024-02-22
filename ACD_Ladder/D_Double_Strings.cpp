@@ -37,7 +37,7 @@ void solve(){
         }
 
     /*
-        O(n^2) approach: O(n) for loop and O(n) for find()
+        O(n^2) approach: O(n) for loop and O(n) for find() method
 
         for(int i=0; i<n; i++){
             string s = v[i];
