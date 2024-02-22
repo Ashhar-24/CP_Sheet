@@ -82,7 +82,7 @@ int main() {
     1. As I had looped over the vector of strings and used again find() over the vector, both had time complexity
        as O(n), hence got TLE as the constraints ie, n is <=10^5.
 
-    2. Optimised above by using unordered_set. The algorithm to create string was same, just changed the way of
+    2. Optimised above by using unordered_set. The algorithm to create the string was same, just changed the way of
        finding the elements of the vector. We used count() over the unordered_set which stored the elements of 
        the vector and it gave the output in O(1).
 */
