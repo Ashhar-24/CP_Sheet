@@ -30,8 +30,9 @@ int main() {
 
 // Quesn: https://codeforces.com/problemset/problem/337/A
 /*
-    Approach: Sort the array and then traverse it from i=0 to i=m-n, as we got to have n items and check the 
-    difference b/w the first and the last element in that selected sub-array of n elements. We store this difference
-    and keep on updating it if we find any smaller difference.
+    Approach: Sort the array (so that the difference between the element is least) and then traverse it 
+    from i=0 to i=m-n, as we got to have n items and check the  difference b/w the first and the last element 
+    in that selected sub-array of n elements. We then store this difference and keep on updating it if we find 
+    any smaller difference.
 
 */
