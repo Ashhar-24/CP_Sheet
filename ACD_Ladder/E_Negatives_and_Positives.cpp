@@ -50,5 +50,6 @@ int main() {
         if no of -ve signs is even, then any combination of signs will result in array with all
         elements as +ve. And if the no of -ve signs is odd, then we can move this sign to the leftmost,
         after sorting the array ie to the smallest element in the array.
+        eg: If count==5, we can remove 4 -ve signs by operation and move 1 -ve sign to the min element.
         In this way we can find the max sum possible by performing the operations as said.
 */
