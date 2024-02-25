@@ -21,25 +21,12 @@ int main(){
         //         }
         //     }
         // cout<<ans<<'\n';
-
-        /*
-            Question: https://codeforces.com/contest/1742/problem/D (1100)
-
-            Approach=> As above brute force approach gave TLE (as n<=2*1e5 ie, n^2==1e10) and time limit was 3sec
-            ie, in 1 sec 1e8 operations can be run and in 3sec 3*1e8.
-
-            So in the new approach, instead of storing  the value at the index, we store the index at the said value, 
-            ie now the value acts as the new index and the index as the new value. By doing this we store the
-            element's max index where it is present. ie, now the array contains the max index for the element and if
-            the element is not present the index value will be 0.
-            Then we traverse this array and check if the element is present ie, v[i]>0 if the element is present and
-            then see if v[i] and v[j], ie the max index where i and j are present, are co prime or not.
-        */
+        // TLE: O(n^2) As n<=1e5, brute force gave TLE
 
         vector <int> v(1001,0);     //intializing array of size 1001 as we won't be using 0th index and all have value 0
         for(int i=1; i<=n; i++){
             int value; cin>>value;
-            v[value]=i;             // stores the index value 'i' where the element was last found ie, max index
+            v[value]=i;             // stores the index value 'i' where the element was last found ie, max index where it is found
         }
 
         int ans=-1;
@@ -54,3 +41,22 @@ int main(){
         cout<<ans<<'\n';
     }
 }
+
+// Question: https://codeforces.com/contest/1742/problem/D (1100) [Must practise]
+/*
+    Approach=>
+        As the constraint given n==1e5, so we must either solve the problem in O(n) or O(n*logn).
+        But since the question is pretty simple, so we just implement is using brute force using a twist.
+            
+        Since value of a[i]<=1000, if there exists an approach where we can use this constraint, we would be allowed to 
+        use O(a^2).
+            So using this, what we can do is that, we make an array to store the index where/when it comes into the 
+            main array. Eg: 1 2 3 3 4 7, [1 2 4 5 0 0 6] represents the last index where 'i' was found.
+
+            ie, instead of storing  the value at the index, we store the index at the said value
+            (which now becomes the new index), ie now the value acts as the new index and the index as the new value. 
+            By doing this we store the element's max index where it is present. ie, now the array contains the max index 
+            for the element and if the element is not present the index value will be 0.
+            Then we traverse this array and check if the element is present ie, v[i]>0 if the element is present and
+            then see if v[i] and v[j], ie the max index where i and j are present, are co prime or not.
+*/
