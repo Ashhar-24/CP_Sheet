@@ -21,7 +21,7 @@ void solve(){
     int count=1;
     for(int i=1; i<n; i++){
         if(v[i]>=v[i-1]) count++;
-        else count=1;
+        else count=1;                           // Takeaway
 
         ans=max(ans,count);
     }
