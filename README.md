@@ -1,4 +1,4 @@
-This repo contains code for problems of CP Sheets.
+This repo contains code for problems of Competitive Programming(CP) Sheets.
 CP Sheet includes:
   1. ACDLadder: https://acodedaily.com/
   2. Hard75 Challenge: https://discord.gg/k4vxnxXfh6 (A Code Daily Community)
