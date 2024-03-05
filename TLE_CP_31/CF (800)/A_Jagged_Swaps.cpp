@@ -37,23 +37,23 @@ int main(){
 
         // }
 
-        /*
-            Quesn: https://codeforces.com/problemset/problem/1896/A
-            Approach: With good observation it can be seen that if a1==1, it is always possible to sort the array.
-            Because the operations that we can perform is from i>=2 and can move/swap a2 and a3. So it becomes necessary
-            that a1==1. Therefore if a1==1, it is always possible to sort else not.
-
-            To sort the array when a1==1, follow:
-            Consider the largest element of the array. Let its index be i. Our objective is to move ai to the end 
-            of the array. If i=n, it means that the largest element is already at the end. Otherwise, since ai is
-            the largest element, this means that ai−1<ai and ai>ai+1. Hence, we can do an operation on index i
-            and move the largest element one step closer to the end. We repeatedly do the operation until we 
-            finally move the largest element to the end of the array. Then, we can pretend that the largest element 
-            does not exist and do the same algorithm for the prefix of size n−1. Hence, we will able to sort the 
-            array by doing this repeatedly.
-        */
 
         if(v[0]!=1)cout<<"NO"<<'\n';
         else cout<<"YES"<<'\n';
     }
 }
+/*
+    Quesn: https://codeforces.com/problemset/problem/1896/A
+    Approach: With good observation it can be seen that if a1==1, it is always possible to sort the array.
+        Because the operations that we can perform is from i>=2 and can move/swap a2 and a3. So it becomes necessary
+        hat a1==1. Therefore if a1==1, it is always possible to sort else not.
+
+        To sort the array when a1==1, follow:
+        Consider the largest element of the array. Let its index be i. Our objective is to move ai to the end 
+        of the array. If i=n, it means that the largest element is already at the end. Otherwise, since ai is
+        the largest element, this means that ai−1<ai and ai>ai+1. Hence, we can do an operation on index i
+        and move the largest element one step closer to the end. We repeatedly do the operation until we 
+        finally move the largest element to the end of the array. Then, we can pretend that the largest element 
+        does not exist and do the same algorithm for the prefix of size n−1. Hence, we will able to sort the 
+        array by doing this repeatedly.
+*/
