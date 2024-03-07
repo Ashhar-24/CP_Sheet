@@ -23,7 +23,7 @@ int main() {
 //Question: https://codeforces.com/contest/1102/problem/A
 /*
     Approach:
-        By observation it is seen that if sum % 2 ==0, then the difference is 0 as ther will exist n(n+1)2 can be
-        equally divided into A and B. Else ceil(n(n+1)/2*2) and (n(n+1))/2*2 will be divided resulting in 1 as 
-        difference.
+        By observation it is seen that if sum % 2 ==0, then the difference is 0 as ther will exist nos s.t.
+        n(n+1)/2 can be equally divided into A and B. Else ceil(n(n+1)/2*2) and (n(n+1))/2*2 will be divided 
+        resulting in 1 as difference.
 */
