@@ -26,3 +26,12 @@ int main() {
 
     return 0;
 }
+
+// Question: https://codeforces.com/problemset/problem/1877/A (800)
+/*
+    Approach: O(n)
+    Notice that each goal increases the efficiency of the team that scores by 1. 
+    But it also simultaneously decreases the efficiency of the opposite team by 1. This means, 
+    if we maintain the sum of efficiency for all teams, each goal does not change the sum. 
+    Therefore, the sum must be 0.
+*/
